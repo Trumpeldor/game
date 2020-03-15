@@ -1,10 +1,17 @@
 import React, { Component, createRef } from 'react'
+import PropTypes from 'prop-types';
 import Cell from './Cell'
 
 class Grid extends Component {
   cellData = []
   trs = []
   iteration = 0
+  static propTypes = {
+    countIterations: PropTypes.func.isRequired,
+    running: PropTypes.bool.isRequired,
+    size: PropTypes.number.isRequired,
+    speed: PropTypes.number.isRequired
+  }
   componentDidMount() {
     this.run();
   }

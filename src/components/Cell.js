@@ -1,8 +1,13 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 
 class Cell extends Component {
   state = {
     color: 'White'
+  }
+  static propTypes = {
+    x: PropTypes.number.isRequired,
+    y: PropTypes.number.isRequired
   }
   componentDidMount() {
     if (Math.round(Math.random()) === 0) {
